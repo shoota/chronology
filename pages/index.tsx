@@ -278,12 +278,13 @@ const Home = () => {
                     <Input
                       type="text"
                       placeholder="yyyy/M/d"
-                      value={
+                      defaultValue={
                         startYearMonth
                           ? format(startYearMonth, "yyyy/M/d", { locale: ja })
                           : ""
                       }
-                      onChange={(e) => {
+                      key={startYearMonth?.getTime()}
+                      onBlur={(e) => {
                         const value = e.target.value
                         // yyyy/M/d形式をパース
                         const match = value.match(/^(\d{4})\/(\d{1,2})\/(\d{1,2})$/)
@@ -333,12 +334,13 @@ const Home = () => {
                     <Input
                       type="text"
                       placeholder="yyyy/M/d"
-                      value={
+                      defaultValue={
                         endYearMonth
                           ? format(endYearMonth, "yyyy/M/d", { locale: ja })
                           : ""
                       }
-                      onChange={(e) => {
+                      key={endYearMonth?.getTime()}
+                      onBlur={(e) => {
                         const value = e.target.value
                         // yyyy/M/d形式をパース
                         const match = value.match(/^(\d{4})\/(\d{1,2})\/(\d{1,2})$/)
@@ -405,12 +407,13 @@ const Home = () => {
                           <Input
                             type="text"
                             placeholder="yyyy/M/d"
-                            value={
+                            defaultValue={
                               segment.startDate
                                 ? format(segment.startDate, "yyyy/M/d", { locale: ja })
                                 : ""
                             }
-                            onChange={(e) => {
+                            key={`start-${segment.id}-${segment.startDate?.getTime()}`}
+                            onBlur={(e) => {
                               const value = e.target.value
                               // yyyy/M/d形式をパース
                               const match = value.match(/^(\d{4})\/(\d{1,2})\/(\d{1,2})$/)
@@ -463,12 +466,13 @@ const Home = () => {
                           <Input
                             type="text"
                             placeholder="yyyy/M/d"
-                            value={
+                            defaultValue={
                               segment.endDate
                                 ? format(segment.endDate, "yyyy/M/d", { locale: ja })
                                 : ""
                             }
-                            onChange={(e) => {
+                            key={`end-${segment.id}-${segment.endDate?.getTime()}`}
+                            onBlur={(e) => {
                               const value = e.target.value
                               // yyyy/M/d形式をパース
                               const match = value.match(/^(\d{4})\/(\d{1,2})\/(\d{1,2})$/)
