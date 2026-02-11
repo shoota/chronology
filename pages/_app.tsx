@@ -1,6 +1,19 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
+import { Noto_Sans_JP } from 'next/font/google'
 
-export const App = ({ Component, pageProps }: AppProps) => {
-  return <Component {...pageProps} />
+const notoSansJP = Noto_Sans_JP({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-noto-sans-jp',
+})
+
+const App = ({ Component, pageProps }: AppProps) => {
+  return (
+    <div className={`${notoSansJP.variable} font-sans`}>
+      <Component {...pageProps} />
+    </div>
+  )
 }
+
+export default App;
