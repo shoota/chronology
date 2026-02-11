@@ -319,7 +319,7 @@ const Home = () => {
                             }
                           }}
                           locale={ja}
-                          captionLayout="dropdown-buttons"
+                          captionLayout="dropdown"
                           fromYear={2000}
                           toYear={2050}
                         />
@@ -375,7 +375,7 @@ const Home = () => {
                             }
                           }}
                           locale={ja}
-                          captionLayout="dropdown-buttons"
+                          captionLayout="dropdown"
                           fromYear={2000}
                           toYear={2050}
                         />
@@ -451,7 +451,7 @@ const Home = () => {
                                   }
                                 }}
                                 locale={ja}
-                                captionLayout="dropdown-buttons"
+                                captionLayout="dropdown"
                                 fromYear={2000}
                                 toYear={2050}
                               />
@@ -510,7 +510,7 @@ const Home = () => {
                                   }
                                 }}
                                 locale={ja}
-                                captionLayout="dropdown-buttons"
+                                captionLayout="dropdown"
                                 fromYear={2000}
                                 toYear={2050}
                               />
