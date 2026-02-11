@@ -314,8 +314,7 @@ const Home = () => {
                           selected={startYearMonth}
                           onSelect={(date) => {
                             if (date) {
-                              // 月の1日に設定
-                              setStartYearMonth(new Date(date.getFullYear(), date.getMonth(), 1))
+                              setStartYearMonth(date)
                             }
                           }}
                           locale={ja}
@@ -370,8 +369,7 @@ const Home = () => {
                           selected={endYearMonth}
                           onSelect={(date) => {
                             if (date) {
-                              // 月の1日に設定
-                              setEndYearMonth(new Date(date.getFullYear(), date.getMonth(), 1))
+                              setEndYearMonth(date)
                             }
                           }}
                           locale={ja}
@@ -443,11 +441,7 @@ const Home = () => {
                                 selected={segment.startDate}
                                 onSelect={(date) => {
                                   if (date) {
-                                    updateColorSegment(
-                                      segment.id,
-                                      "startDate",
-                                      new Date(date.getFullYear(), date.getMonth(), 1)
-                                    )
+                                    updateColorSegment(segment.id, "startDate", date)
                                   }
                                 }}
                                 locale={ja}
@@ -502,11 +496,7 @@ const Home = () => {
                                 selected={segment.endDate}
                                 onSelect={(date) => {
                                   if (date) {
-                                    updateColorSegment(
-                                      segment.id,
-                                      "endDate",
-                                      new Date(date.getFullYear(), date.getMonth(), 1)
-                                    )
+                                    updateColorSegment(segment.id, "endDate", date)
                                   }
                                 }}
                                 locale={ja}
